@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF52178D2CE14AF900744E30 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52178C2CE14AF900744E30 /* Caller.swift */; };
+		BF52178F2CE14F9400744E30 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF52178E2CE14F9400744E30 /* Config.xcconfig */; };
 		BFABEA132CDC20460091BE0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABEA122CDC20460091BE0E /* AppDelegate.swift */; };
 		BFABEA152CDC20460091BE0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABEA142CDC20460091BE0E /* SceneDelegate.swift */; };
 		BFABEA172CDC20460091BE0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABEA162CDC20460091BE0E /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF52178C2CE14AF900744E30 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
+		BF52178E2CE14F9400744E30 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BFABEA0F2CDC20460091BE0E /* MirrorMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirrorMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFABEA122CDC20460091BE0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFABEA142CDC20460091BE0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			children = (
 				BFABEA122CDC20460091BE0E /* AppDelegate.swift */,
 				BFABEA142CDC20460091BE0E /* SceneDelegate.swift */,
+				BF52178C2CE14AF900744E30 /* Caller.swift */,
+				BF52178E2CE14F9400744E30 /* Config.xcconfig */,
 				BFABEA162CDC20460091BE0E /* ViewController.swift */,
 				BFABEA182CDC20460091BE0E /* Main.storyboard */,
 				BFABEA1B2CDC20480091BE0E /* Assets.xcassets */,
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF52178F2CE14F9400744E30 /* Config.xcconfig in Resources */,
 				BFABEA1C2CDC20480091BE0E /* Assets.xcassets in Resources */,
 				BFABEA1F2CDC20480091BE0E /* Base in Resources */,
 				BFABEA1A2CDC20460091BE0E /* Base in Resources */,
@@ -140,6 +147,7 @@
 			files = (
 				BFABEA172CDC20460091BE0E /* ViewController.swift in Sources */,
 				BFABEA132CDC20460091BE0E /* AppDelegate.swift in Sources */,
+				BF52178D2CE14AF900744E30 /* Caller.swift in Sources */,
 				BFABEA152CDC20460091BE0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

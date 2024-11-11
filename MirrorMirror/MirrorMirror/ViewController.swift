@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     // Replace these with your actual API key and endpoint
-    let apiKey = "4mb49wKzbwGBl7UTbFMZGPtagiHfiKymTHt9kcmuYI8OJve6ndQiJQQJ99AKACYeBjFXJ3w3AAAFACOGd5OZ"
-    let endpoint = "https://mirrormirrorbackgroundremover.cognitiveservices.azure.com/"
+    let apiKey = ""
+    let endpoint = ""
        
 
     

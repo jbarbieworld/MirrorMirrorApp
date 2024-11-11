@@ -7,17 +7,23 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     // Replace these with your actual API key and endpoint
-    let apiKey = "VISION_KEY"
-    let endpoint = "VISION_ENDPOINT"
+    let apiKey = "4mb49wKzbwGBl7UTbFMZGPtagiHfiKymTHt9kcmuYI8OJve6ndQiJQQJ99AKACYeBjFXJ3w3AAAFACOGd5OZ"
+    let endpoint = "https://mirrormirrorbackgroundremover.cognitiveservices.azure.com/"
        
+
+    
        private let apiService: APIService
        
        @IBOutlet weak var imageView: UIImageView! // Connected to storyboard
-       @IBAction func removeBackgroundButtonTapped(_ sender: UIButton) {
-           removeBackground()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBAction func removeBackgroundButtonTapped(_ sender: UIButton) {
+          removeBackground()
+           imageView.layer.opacity = 0.5
+        activityIndicator.startAnimating()
        }
        
        init() {
@@ -76,6 +82,8 @@ class ViewController: UIViewController {
                            
                            // Update the UIImageView with the new image
                            if let newImage = UIImage(contentsOfFile: newImagePath.path) {
+                               self?.activityIndicator.stopAnimating()
+                               self?.imageView.layer.opacity = 1
                                self?.imageView.image = newImage
                                print("Background removed successfully!")
                            }

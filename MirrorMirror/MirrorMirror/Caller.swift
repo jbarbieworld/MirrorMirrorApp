@@ -42,6 +42,7 @@ class APIService {
             }
             
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let data = data {
+                print("Response: \(httpResponse.statusCode)")
                 let fileManager = FileManager.default
                 let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
                 let outputPath = documentsURL.appendingPathComponent("background_removed_image.png")

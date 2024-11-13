@@ -108,47 +108,6 @@ class BuildOutfitVC: UIViewController{
     }
 
 
-    
-    @IBAction func TL(_ sender: UIButton) {
-        if currentTopIndex > 0 {
-            currentTopIndex -= 1
-            loadImage(for: tops[currentTopIndex], into: topVC)
-        }
-
-    }
-    @IBAction func TR(_ sender: UIButton) {
-        if currentTopIndex < tops.count - 1 {
-            currentTopIndex += 1
-            loadImage(for: tops[currentTopIndex], into: topVC)
-        }
-    }
-    
-    @IBAction func BL(_ sender: UIButton) {
-        if currentBottomIndex > 0 {
-            currentBottomIndex -= 1
-            loadImage(for: bottoms[currentBottomIndex], into: bottomVC)
-        }
-    }
-    @IBAction func BR(_ sender: UIButton) {
-        if currentBottomIndex < bottoms.count - 1 {
-            currentBottomIndex += 1
-            loadImage(for: bottoms[currentBottomIndex], into: bottomVC)
-        }
-    }
-    
-    
-    @IBAction func AL(_ sender: UIButton) {
-        if currentAccessoryIndex > 0 {
-            currentAccessoryIndex -= 1
-            loadImage(for: accessories[currentAccessoryIndex], into: accessoryVC)
-        }
-    }
-    @IBAction func AR(_ sender: UIButton) {
-        if currentAccessoryIndex < accessories.count - 1 {
-            currentAccessoryIndex += 1
-            loadImage(for: accessories[currentAccessoryIndex], into: accessoryVC)
-        }
-    }
 */
     
 

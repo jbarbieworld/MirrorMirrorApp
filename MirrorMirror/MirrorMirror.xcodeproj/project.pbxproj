@@ -16,6 +16,8 @@
 		BFABEA1C2CDC20480091BE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFABEA1B2CDC20480091BE0E /* Assets.xcassets */; };
 		BFABEA1F2CDC20480091BE0E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BFABEA1E2CDC20480091BE0E /* Base */; };
 		F7A421F72CE3D75100F3B067 /* BuildOutfitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */; };
+		F7A421F92CE444C500F3B067 /* ClosetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421F82CE444C500F3B067 /* ClosetViewController.swift */; };
+		F7A421FB2CE4450400F3B067 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */; };
 		F7DECD7B2CE2DB41003AEDF9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DECD7A2CE2DB41003AEDF9 /* Category.swift */; };
 		F7DECD7D2CE2DF99003AEDF9 /* ClothingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DECD7C2CE2DF99003AEDF9 /* ClothingData.swift */; };
 		F7DECD852CE322E2003AEDF9 /* BuildOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DECD842CE322E2003AEDF9 /* BuildOutfit.swift */; };
@@ -34,6 +36,8 @@
 		BFABEA1E2CDC20480091BE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFABEA202CDC20480091BE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildOutfitVC.swift; sourceTree = "<group>"; };
+		F7A421F82CE444C500F3B067 /* ClosetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewController.swift; sourceTree = "<group>"; };
+		F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F7DECD7A2CE2DB41003AEDF9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F7DECD7C2CE2DF99003AEDF9 /* ClothingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingData.swift; sourceTree = "<group>"; };
 		F7DECD842CE322E2003AEDF9 /* BuildOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildOutfit.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				F7DECD842CE322E2003AEDF9 /* BuildOutfit.swift */,
 				F7DECD862CE32643003AEDF9 /* ClothingCell.swift */,
 				F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */,
+				F7A421F82CE444C500F3B067 /* ClosetViewController.swift */,
+				F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */,
 			);
 			path = MirrorMirror;
 			sourceTree = "<group>";
@@ -161,11 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A421F72CE3D75100F3B067 /* BuildOutfitVC.swift in Sources */,
+				F7A421FB2CE4450400F3B067 /* ImageCollectionViewCell.swift in Sources */,
 				BFABEA172CDC20460091BE0E /* ViewController.swift in Sources */,
 				F7DECD852CE322E2003AEDF9 /* BuildOutfit.swift in Sources */,
 				BFABEA132CDC20460091BE0E /* AppDelegate.swift in Sources */,
 				BF52178D2CE14AF900744E30 /* Caller.swift in Sources */,
 				F7DECD872CE32643003AEDF9 /* ClothingCell.swift in Sources */,
+				F7A421F92CE444C500F3B067 /* ClosetViewController.swift in Sources */,
 				BFABEA152CDC20460091BE0E /* SceneDelegate.swift in Sources */,
 				F7DECD7B2CE2DB41003AEDF9 /* Category.swift in Sources */,
 				F7DECD7D2CE2DF99003AEDF9 /* ClothingData.swift in Sources */,

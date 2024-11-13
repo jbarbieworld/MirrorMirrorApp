@@ -83,6 +83,57 @@
             </objects>
             <point key="canvasLocation" x="4802.2900763358775" y="429.57746478873241"/>
         </scene>
+        <!--Collection view-->
+        <scene sceneID="Nvm-d9-fdM">
+            <objects>
+                <viewController id="s91-NS-l0b" customClass="ClosetViewController" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iWQ-Z9-HbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SME-2A-lvp">
+                                <rect key="frame" x="0.0" y="166" width="393" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fcd-BO-7s2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="1PP-fi-Wf9" customClass="ImageCollectionViewCell" customModule="MirrorMirror" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="we5-yX-cyf">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ft-6I-YLl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="7ft-6I-YLl" id="FYy-8q-Ile"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xj4-MZ-wan"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Collection view" id="70E-80-d0I"/>
+                    <connections>
+                        <outlet property="collectionView" destination="SME-2A-lvp" id="INs-Fd-5wk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91S-Ai-dCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2970.2290076335876" y="1234.5070422535211"/>
+        </scene>
         <!--Item-->
         <scene sceneID="hLs-hq-GrM">
             <objects>
@@ -244,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usk-wR-4jR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4800.7633587786258" y="1212.6760563380283"/>
+            <point key="canvasLocation" x="3985" y="3172"/>
         </scene>
         <!--Swipe-->
         <scene sceneID="Aus-2L-Z8R">
@@ -366,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPh-HA-415" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5179" y="1923"/>
+            <point key="canvasLocation" x="4802" y="2988"/>
         </scene>
         <!--Category-->
         <scene sceneID="4p3-hz-tg2">
@@ -415,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbn-ud-us7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5758" y="430"/>
+            <point key="canvasLocation" x="5908" y="3470"/>
         </scene>
         <!--Upload-->
         <scene sceneID="sOq-R7-DpT">
@@ -449,6 +500,7 @@
                     <connections>
                         <segue destination="OjI-5r-X3h" kind="relationship" relationship="viewControllers" id="2Ha-lJ-qTK"/>
                         <segue destination="mGh-I9-jfS" kind="relationship" relationship="viewControllers" id="InD-4x-ual"/>
+                        <segue destination="s91-NS-l0b" kind="relationship" relationship="viewControllers" id="l7q-6n-fsc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLI-F3-OPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -457,7 +509,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w9B-LZ-jAE"/>
+        <segue reference="InD-4x-ual"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.backward.circle.fill" catalog="system" width="128" height="123"/>

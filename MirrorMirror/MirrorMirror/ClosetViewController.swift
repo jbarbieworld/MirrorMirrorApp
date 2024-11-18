@@ -30,6 +30,11 @@ class ClosetViewController: UIViewController, UICollectionViewDataSource, UIColl
                
                saveImagesToDocuments()
                collectionView.reloadData()
+            
+            self.view.backgroundColor = UIColor.background
+            tabBarController?.tabBar.tintColor = .darkblue // Selected tab
+            tabBarController?.tabBar.unselectedItemTintColor = .white
+            self.view.backgroundColor = UIColor.background
            }
     
         override func viewWillAppear(_ animated: Bool) {

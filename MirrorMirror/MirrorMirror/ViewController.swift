@@ -52,10 +52,14 @@ class ViewController: UIViewController {
             buildOutfitVC = outfitVC
         }
         //****************************************************
-
+        
         
         // Set a sample image
         imageView.image = UIImage(named: "test_shirt") // Replace with an actual image in your assets
+        self.view.backgroundColor = UIColor.background
+        tabBarController?.tabBar.tintColor = .darkblue // Selected tab
+        tabBarController?.tabBar.unselectedItemTintColor = .white
+        self.view.backgroundColor = UIColor.background
         
     }
     

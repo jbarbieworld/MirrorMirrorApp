@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -66,7 +67,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                     </view>
                     <navigationItem key="navigationItem" id="En7-Vd-v4M"/>
                     <connections>
@@ -81,9 +82,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Mdx-Kz-Jsi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4802.2900763358775" y="429.57746478873241"/>
+            <point key="canvasLocation" x="2079" y="1560"/>
         </scene>
-        <!--Collection view-->
+        <!--My Closet-->
         <scene sceneID="Nvm-d9-fdM">
             <objects>
                 <viewController id="s91-NS-l0b" customClass="ClosetViewController" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,9 +93,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SME-2A-lvp">
-                                <rect key="frame" x="0.0" y="166" width="393" height="603"/>
+                                <rect key="frame" x="30" y="127" width="363" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fcd-BO-7s2">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -103,10 +104,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="1PP-fi-Wf9" customClass="ImageCollectionViewCell" customModule="MirrorMirror" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="we5-yX-cyf">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ft-6I-YLl">
@@ -123,18 +124,18 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xj4-MZ-wan"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Collection view" id="70E-80-d0I"/>
+                    <tabBarItem key="tabBarItem" title="My Closet" image="Closet" id="70E-80-d0I"/>
                     <connections>
                         <outlet property="collectionView" destination="SME-2A-lvp" id="INs-Fd-5wk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91S-Ai-dCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2970.2290076335876" y="1234.5070422535211"/>
+            <point key="canvasLocation" x="2954.9618320610684" y="14.788732394366198"/>
         </scene>
-        <!--Item-->
+        <!--Build an Outfit-->
         <scene sceneID="hLs-hq-GrM">
             <objects>
                 <viewController storyboardIdentifier="BuildOutfitVC" id="mGh-I9-jfS" customClass="BuildOutfitVC" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,7 +159,9 @@
                                 <rect key="frame" x="29" y="227" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.backward.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.backward.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="TL:" destination="mGh-I9-jfS" eventType="touchUpInside" id="Db0-hi-j2r"/>
                                 </connections>
@@ -167,7 +170,9 @@
                                 <rect key="frame" x="315" y="227" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="TR:" destination="mGh-I9-jfS" eventType="touchUpInside" id="Jdl-cW-5qn"/>
                                 </connections>
@@ -176,7 +181,9 @@
                                 <rect key="frame" x="29" y="403" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.left.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.left.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="BL:" destination="mGh-I9-jfS" eventType="touchUpInside" id="mmq-mr-em7"/>
                                 </connections>
@@ -185,7 +192,9 @@
                                 <rect key="frame" x="313" y="609" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="AR:" destination="mGh-I9-jfS" eventType="touchUpInside" id="vYz-Bl-DQi"/>
                                 </connections>
@@ -194,7 +203,9 @@
                                 <rect key="frame" x="31" y="609" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.left.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.left.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="AL:" destination="mGh-I9-jfS" eventType="touchUpInside" id="czd-7p-tuy"/>
                                 </connections>
@@ -203,16 +214,18 @@
                                 <rect key="frame" x="315" y="403" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrowshape.right.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="BR:" destination="mGh-I9-jfS" eventType="touchUpInside" id="gkY-xO-Qao"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yA7-WA-RZO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Toa-at-rEd"/>
+                    <tabBarItem key="tabBarItem" title="Build an Outfit" image="Shirt" id="Toa-at-rEd"/>
                     <navigationItem key="navigationItem" id="nz2-Kp-FgX"/>
                     <connections>
                         <outlet property="accessoryView" destination="PI9-KO-ObU" id="giC-Xr-T2C"/>
@@ -228,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7D-lP-guP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3890.8396946564885" y="1193.661971830986"/>
+            <point key="canvasLocation" x="3897" y="180"/>
         </scene>
         <!--Build outfit-->
         <scene sceneID="Daw-EU-Lrf">
@@ -468,11 +481,11 @@
             </objects>
             <point key="canvasLocation" x="5908" y="3470"/>
         </scene>
-        <!--Upload-->
+        <!--Add Garment-->
         <scene sceneID="sOq-R7-DpT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OjI-5r-X3h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Upload" id="vk2-EX-t1j"/>
+                    <tabBarItem key="tabBarItem" title="Add Garment" image="camera" id="vk2-EX-t1j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xSw-45-EmH">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -485,7 +498,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FF-pY-gy6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3877.0992366412211" y="429.57746478873241"/>
+            <point key="canvasLocation" x="2079" y="15"/>
+        </scene>
+        <!--Saved Outfits-->
+        <scene sceneID="GR7-rb-ykZ">
+            <objects>
+                <viewController id="oAT-CW-Yb3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Evh-yq-RST">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PaN-wx-al2"/>
+                        <color key="backgroundColor" name="background"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Saved Outfits" image="Saved" id="TeY-iG-gf2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6J-Cc-4Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4602" y="-777"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4tE-0n-mWN">
@@ -496,26 +525,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="grayblue"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OjI-5r-X3h" kind="relationship" relationship="viewControllers" id="2Ha-lJ-qTK"/>
-                        <segue destination="mGh-I9-jfS" kind="relationship" relationship="viewControllers" id="InD-4x-ual"/>
                         <segue destination="s91-NS-l0b" kind="relationship" relationship="viewControllers" id="l7q-6n-fsc"/>
+                        <segue destination="mGh-I9-jfS" kind="relationship" relationship="viewControllers" id="InD-4x-ual"/>
+                        <segue destination="OjI-5r-X3h" kind="relationship" relationship="viewControllers" id="2Ha-lJ-qTK"/>
+                        <segue destination="oAT-CW-Yb3" kind="relationship" relationship="viewControllers" id="m4G-lV-eKL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLI-F3-OPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2950.3816793893129" y="429.57746478873241"/>
+            <point key="canvasLocation" x="2955" y="-804"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="InD-4x-ual"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Closet" width="31" height="24"/>
+        <image name="Saved" width="27" height="26"/>
+        <image name="Shirt" width="29" height="25"/>
         <image name="arrowshape.backward.circle.fill" catalog="system" width="128" height="123"/>
         <image name="arrowshape.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="arrowshape.right.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="camera" width="24.345699310302734" height="19.24799919128418"/>
         <image name="test_shirt" width="3024" height="4032"/>
+        <namedColor name="AccentColor">
+            <color red="0.0040000006556510925" green="0.16500000655651093" blue="0.21200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.84799998998641968" green="0.89300000667572021" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="grayblue">
+            <color red="0.55299997329711914" green="0.62400001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

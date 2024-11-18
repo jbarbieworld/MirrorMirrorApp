@@ -160,7 +160,11 @@ class BuildOutfitVC: UIViewController{
 
         updateClothingItems()
         print("Top images count: \(topImages.count)") // Debugging line to check the count of topImages
-
+        
+        self.view.backgroundColor = UIColor.background
+        tabBarController?.tabBar.tintColor = .darkblue // Selected tab
+        tabBarController?.tabBar.unselectedItemTintColor = .white
+        self.view.backgroundColor = UIColor.background
     }
 
     

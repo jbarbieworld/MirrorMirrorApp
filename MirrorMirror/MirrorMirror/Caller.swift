@@ -12,6 +12,7 @@ class APIService {
     private let apiKey: String
     private let endpoint: String
 
+
     init(apiKey: String, endpoint: String) {
         self.apiKey = apiKey
         self.endpoint = endpoint

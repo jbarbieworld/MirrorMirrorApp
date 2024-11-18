@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXa-cs-b2z">
-                                <rect key="frame" x="145" y="616" width="104" height="35"/>
+                                <rect key="frame" x="144" y="616" width="104" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="removeBG"/>
@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o3-zX-CQs">
-                                <rect key="frame" x="95" y="671" width="53" height="35"/>
+                                <rect key="frame" x="83" y="671" width="53" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Top"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-fW-Tkl">
-                                <rect key="frame" x="156" y="671" width="80" height="35"/>
+                                <rect key="frame" x="144" y="671" width="80" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Bottom"/>
@@ -56,13 +56,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-AY-aPm">
-                                <rect key="frame" x="238" y="670" width="104" height="35"/>
+                                <rect key="frame" x="226" y="671" width="104" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Accessory"/>
                                 <connections>
                                     <action selector="accessoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUL-5F-v6R"/>
                                     <action selector="accessoryButtonTapped:" destination="Mdx-Kz-Jsi" eventType="touchUpInside" id="QeI-Qf-QYE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sax-yP-m9Y">
+                                <rect key="frame" x="150" y="545" width="89" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraOpened:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzc-0C-vvv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,7 +91,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Mdx-Kz-Jsi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2079" y="1560"/>
+            <point key="canvasLocation" x="2078.6259541984732" y="822.53521126760563"/>
         </scene>
         <!--My Closet-->
         <scene sceneID="Nvm-d9-fdM">
@@ -540,7 +549,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="InD-4x-ual"/>
+        <segue reference="w9B-LZ-jAE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Closet" width="31" height="24"/>

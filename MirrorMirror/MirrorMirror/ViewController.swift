@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     // Replace these with your actual API key and endpoint
@@ -173,6 +173,32 @@ class ViewController: UIViewController {
     }
 
     
+    //Camera functionality
+    
+    @IBAction func cameraOpened(_ sender: Any) {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+    // The info dictionary may contain multiple representations of the image. You want to use the original.
+       guard let selectedImage = info[.originalImage] as? UIImage else {
+        fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        
+        imageView.image = selectedImage
+        
+        dismiss(animated:true, completion: nil)
+
+            
+    }
+    
 }
+
 
 

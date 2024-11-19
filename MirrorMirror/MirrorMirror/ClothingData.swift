@@ -48,7 +48,13 @@ class ImageManager {
     var backgroundRemovedImage: UIImage? // Store the background-removed image
     var backgroundRemovedImagePath: String? // Store the path of the background-removed image
     var selectedCategory: BuildOutfitVC.ClothingCategory? // Stores the selected category
-
+   
+    var allImages: [UIImage] = [] // For images with backgrounds
+    var backgroundRemovedImages: [UIImage] = [] // For background-removed images
+     var backgroundRemovedImagePaths: [String] = [] // Store file paths
+    
+  
+        var imagePaths: [String] = [] // Stores file paths of original images
     
 }
 

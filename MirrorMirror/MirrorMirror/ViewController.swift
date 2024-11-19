@@ -57,10 +57,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Set a sample image
         imageView.image = UIImage(named: "test_shirt") // Replace with an actual image in your assets
         self.view.backgroundColor = UIColor.background
-        tabBarController?.tabBar.tintColor = .darkblue // Selected tab
-        tabBarController?.tabBar.unselectedItemTintColor = .white
-        self.view.backgroundColor = UIColor.background
-        
+
+     
     }
     
     private func removeBackground() {
@@ -94,7 +92,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 case .success(let backgroundRemovedData):
                     // Save the background-removed image to the Documents directory
                     let newImagePath = documentsDirectory.appendingPathComponent("background_removed_image.png")
-                    
+
                     do {
                         try backgroundRemovedData.write(to: newImagePath)
                         print("Background-removed image saved to: \(newImagePath.path)")
@@ -103,8 +101,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         //SWIPE: get image path for build outfit vc
                         if let backgroundImage = UIImage(contentsOfFile: newImagePath.path) {
                             ImageManager.shared.backgroundRemovedImage = backgroundImage
-                            ImageManager.shared.backgroundRemovedImagePath = newImagePath.path
-                            print("Background image loaded: \(newImagePath.path)")
+                            ImageManager.shared.backgroundRemovedImagePath = saveImageToDocuments(image: backgroundImage, imageName: newImagePath.path)
+                            
                         }
                         else {
                             print("Failed to load background image.")
@@ -187,18 +185,75 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
     // The info dictionary may contain multiple representations of the image. You want to use the original.
-       guard let selectedImage = info[.originalImage] as? UIImage else {
+       /*guard let selectedImage = info[.originalImage] as? UIImage else {
         fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
         imageView.image = selectedImage
+        */
         
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
+            if let savedPath = saveImageToDocuments(image: selectedImage, imageName: "captured_image_") {
+                ImageManager.shared.imagePaths.append(savedPath)
+                NotificationCenter.default.post(name: Notification.Name("NewImageAdded"), object: nil)
+            }
+            dismiss(animated: true, completion: nil)
+        }
         dismiss(animated:true, completion: nil)
 
             
     }
     
 }
+
+//func saveImageToDocuments(image: UIImage, imageName: String) -> String? {
+//    let fileURL = getDocumentsDirectory().appendingPathComponent("\(imageName).png")
+//    guard let data = image.pngData() else { return nil }
+//    do {
+//        try data.write(to: fileURL)
+//        print("Saved image to \(fileURL.path)")
+//        return fileURL.path
+//    } catch {
+//        print("Failed to save image: \(error)")
+//        return nil
+//    }
+//}
+
+func saveImageToDocuments(image: UIImage, imageName: String) -> String? {
+    let documentsDirectory = getDocumentsDirectory()
+    let backgroundLessDirectory = documentsDirectory.appendingPathComponent("backgroundLess")
+    
+    // Ensure the "backgroundLess" directory exists
+    if !FileManager.default.fileExists(atPath: backgroundLessDirectory.path) {
+        do {
+            try FileManager.default.createDirectory(at: backgroundLessDirectory, withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            print("Failed to create backgroundLess directory: \(error)")
+            return nil
+        }
+    }
+    
+    // Append UUID to the file name
+    let uniqueFileName = "\(imageName)_\(UUID().uuidString).png"
+    let fileURL = backgroundLessDirectory.appendingPathComponent(uniqueFileName)
+    
+    // Save the image
+    guard let data = image.pngData() else { return nil }
+    do {
+        try data.write(to: fileURL)
+        print("Saved image to \(fileURL.path)")
+        return fileURL.path
+    } catch {
+        print("Failed to save image: \(error)")
+        return nil
+    }
+}
+
+func getDocumentsDirectory() -> URL {
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+}
+
 
 
 

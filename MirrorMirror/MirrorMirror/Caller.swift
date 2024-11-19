@@ -57,6 +57,7 @@ class APIService {
             } else {
                 completion(.failure(NSError(domain: "Invalid response", code: -3, userInfo: nil)))
             }
+            
         }
         
         task.resume()
@@ -74,4 +75,5 @@ class APIService {
             return nil
         }
     }
+    
 }

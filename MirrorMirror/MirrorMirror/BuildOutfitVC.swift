@@ -56,7 +56,7 @@ class BuildOutfitVC: UIViewController{
       
         NotificationCenter.default.addObserver(self, selector: #selector(updateImage), name: Notification.Name("BackgroundImageUpdated"), object: nil)
         
-        if let screenshot = UIImage(named: "noPicture.jpeg") {
+        if let screenshot = UIImage(named: "icons8-hanger-100.png") {
             topImages.append(screenshot) // Add to topImages array
             currentTopIndex = 0 // Set the index to 0 since this is the first image
             topView.image = screenshot // Set the screenshot to the UIImageView for visual display
@@ -100,16 +100,19 @@ class BuildOutfitVC: UIViewController{
                 case .top:
                     topView.image = updatedImage
                     topImages.append(updatedImage)  // Add to topImages array
+                    currentTopIndex = topImages.count - 1 // Set to the newly added image
 
                     print("TOP SET.")
                 case .bottom:
                     bottomView.image = updatedImage
                     bottomImages.append(updatedImage)  // Add to topImages array
+                    currentBottomIndex = bottomImages.count - 1 // Set to the newly added image
 
                     print("BOTTOM SET.")
                 case .accessory:
                     accessoryView.image = updatedImage
                     accessoryImages.append(updatedImage)  // Add to topImages array
+                    currentAccessoryIndex = accessoryImages.count - 1 // Set to the newly added image
 
                     print("ACCESSORY SET.")
                 }
@@ -239,6 +242,9 @@ class BuildOutfitVC: UIViewController{
     
     
     @IBAction func saveButton(_ sender: Any) {
+        
+        updateClothingItems()
+
         guard currentTopIndex < topImages.count, currentBottomIndex < bottomImages.count, currentAccessoryIndex < accessoryImages.count else{
             
             print("Cannot save outfit. One or more indices are invalid.")
@@ -247,6 +253,26 @@ class BuildOutfitVC: UIViewController{
         
         OutfitManager.shared.saveOutfit(topIndex: currentTopIndex, bottomIndex: currentBottomIndex, accessoryIndex: currentAccessoryIndex)
         print("Outfit saved! Current indices: top =\(currentTopIndex), bottom =\(currentBottomIndex), accessory =\(currentAccessoryIndex)")
+    }
+    
+    
+    @IBAction func shuffleButton(_ sender: UIButton) {
+        
+        if !topImages.isEmpty, !bottomImages.isEmpty, !accessoryImages.isEmpty {
+            // Random index for top, bottom, and accessory categories
+            currentTopIndex = Int.random(in: 0..<topImages.count)
+            currentBottomIndex = Int.random(in: 0..<bottomImages.count)
+            currentAccessoryIndex = Int.random(in: 0..<accessoryImages.count)
+            
+            // Debugging print statements to verify the random indices
+            print("Shuffling: Top index = \(currentTopIndex), Bottom index = \(currentBottomIndex), Accessory index = \(currentAccessoryIndex)")
+            
+            // Update the clothing items displayed in the UI
+            updateClothingItems()
+        } else {
+            print("One or more clothing categories are empty. Cannot shuffle.")
+        }
+
     }
     
 }

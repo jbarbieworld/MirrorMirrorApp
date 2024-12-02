@@ -48,13 +48,53 @@ class ImageManager {
     var backgroundRemovedImage: UIImage? // Store the background-removed image
     var backgroundRemovedImagePath: String? // Store the path of the background-removed image
     var selectedCategory: BuildOutfitVC.ClothingCategory? // Stores the selected category
-   
+    
     var allImages: [UIImage] = [] // For images with backgrounds
     var backgroundRemovedImages: [UIImage] = [] // For background-removed images
-     var backgroundRemovedImagePaths: [String] = [] // Store file paths
+    var backgroundRemovedImagePaths: [String] = [] // Store file paths
     
-  
-        var imagePaths: [String] = [] // Stores file paths of original images
     
+    var imagePaths: [String] = [] // Stores file paths of original images
+    
+    
+    var topImages: [UIImage] = []
+    var bottomImages: [UIImage] = []
+    var accessoryImages: [UIImage] = []
+    
+    func addTopImage(_ image: UIImage) {
+        if !topImages.contains(image) {
+            topImages.append(image)
+        }
+    }
+    func addBottomImage(_ image: UIImage) {
+        if !bottomImages.contains(image) {
+            bottomImages.append(image)
+        }
+    }
+    func addAccessoryImage(_ image: UIImage) {
+        if !accessoryImages.contains(image) {
+            accessoryImages.append(image)
+        }
+    }
 }
 
+struct Outfit{
+    let topIndex: Int
+    let bottomIndex: Int
+    let accessoryIndex: Int
+}
+
+
+class OutfitManager{
+    static let shared = OutfitManager()
+    private init() { }
+
+    private var savedOutfits: [Outfit] = []
+    func saveOutfit(topIndex: Int, bottomIndex: Int, accessoryIndex: Int) {
+        let outfit = Outfit(topIndex: topIndex, bottomIndex: bottomIndex, accessoryIndex: accessoryIndex)
+        savedOutfits.append(outfit)
+    }
+    func getOutfits() -> [Outfit] {
+        return savedOutfits
+    }
+}

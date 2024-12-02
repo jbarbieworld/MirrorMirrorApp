@@ -227,7 +227,11 @@ class BuildOutfitVC: UIViewController{
         case .accessory:
             accessoryImages.append(image)
         }
-        updateClothingItems() // Update the display after adding a new item
+
+        
+        ImageManager.shared.allImages.append(image)
+        NotificationCenter.default.post(name: Notification.Name("NewImageAdded"), object: nil)
+        updateClothingItems()
     }
     
     

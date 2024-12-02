@@ -613,16 +613,17 @@
             </objects>
             <point key="canvasLocation" x="6257.2519083969464" y="-772.53521126760563"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBarController-->
         <scene sceneID="4tE-0n-mWN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="w0j-tB-VpN" sceneMemberID="viewController">
+                <tabBarController title="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="w0j-tB-VpN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kBZ-xM-iWM">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="grayblue"/>
+                        <color key="tintColor" name="grayblue"/>
+                        <color key="barTintColor" name="background"/>
+                        <color key="selectedImageTintColor" name="grayblue"/>
                     </tabBar>
                     <connections>
                         <segue destination="s91-NS-l0b" kind="relationship" relationship="viewControllers" id="l7q-6n-fsc"/>
@@ -656,7 +657,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w9B-LZ-jAE"/>
+        <segue reference="InD-4x-ual"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Closet" width="31" height="24"/>

@@ -8,37 +8,6 @@
 
 import Foundation
 import UIKit
-/*
-class ClothingData{
-    
-    static let shared = ClothingData()
-    var clothingItems: [ClothingItem] = []
-}
-
-struct ClothingItem{
-    var imagePath: String
-    var category: CategoryType
-    
-    init(imagePath: String, category: CategoryType) {
-        self.imagePath = imagePath
-        self.category = category
-    }
-}
-
-enum CategoryType{
-    case none
-    case top
-    case bottom
-    case accessory
-}
-
-var selectedOutfit: [CategoryType: ClothingItem?] = [
-    .top: nil,
-    .bottom: nil,
-    .accessory: nil
-]
-*/
-
 
 class ImageManager {
     static let shared = ImageManager()

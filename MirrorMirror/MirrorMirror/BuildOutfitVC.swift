@@ -75,8 +75,11 @@ class BuildOutfitVC: UIViewController{
         if let shirt2 = UIImage(named: "Shirt2.png") {
             topImages.append(shirt2)
         }
+        
+        bottomImages.append(UIImage(named: "Pants1.png")!)
 
 
+        updateImage()
         updateClothingItems()
         print("Top images count: \(topImages.count)") // Debugging line to check the count of topImages
         

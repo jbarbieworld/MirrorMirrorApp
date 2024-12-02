@@ -111,6 +111,57 @@
             <point key="canvasLocation" x="1829.7709923664122" y="772.53521126760563"/>
         </scene>
         <!--My Closet-->
+        <scene sceneID="Gxc-HL-C7d">
+            <objects>
+                <viewController id="tFt-G6-mu3" customClass="myClosetVC" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ee-u6-wbA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hwH-7X-91M">
+                                <rect key="frame" x="0.0" y="119" width="377" height="630"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="background"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="75g-cJ-Lga">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClosetCell" id="ZfI-Xh-TH5" customClass="myClosetViewCell" customModule="MirrorMirror" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yxj-z7-QPd">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-SQ-Bbw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="closetImage" destination="DCh-SQ-Bbw" id="Gy4-op-8Rc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8A0-Nx-E7s"/>
+                        <color key="backgroundColor" name="background"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Closet" id="jPV-Br-31E"/>
+                    <connections>
+                        <outlet property="closetCV" destination="hwH-7X-91M" id="oII-E7-yE7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edn-vA-YRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963" y="-719"/>
+        </scene>
+        <!--My Closet-->
         <scene sceneID="Nvm-d9-fdM">
             <objects>
                 <viewController id="s91-NS-l0b" customClass="ClosetViewController" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,9 +204,6 @@
                         <color key="backgroundColor" name="background"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Closet" image="Closet" id="70E-80-d0I"/>
-                    <connections>
-                        <outlet property="collectionView" destination="SME-2A-lvp" id="INs-Fd-5wk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91S-Ai-dCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -626,10 +674,10 @@
                         <color key="selectedImageTintColor" name="grayblue"/>
                     </tabBar>
                     <connections>
-                        <segue destination="s91-NS-l0b" kind="relationship" relationship="viewControllers" id="l7q-6n-fsc"/>
                         <segue destination="mGh-I9-jfS" kind="relationship" relationship="viewControllers" id="InD-4x-ual"/>
                         <segue destination="OjI-5r-X3h" kind="relationship" relationship="viewControllers" id="2Ha-lJ-qTK"/>
                         <segue destination="WOK-wz-Row" kind="relationship" relationship="viewControllers" id="m4G-lV-eKL"/>
+                        <segue destination="tFt-G6-mu3" kind="relationship" relationship="viewControllers" id="0nD-KN-cJa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLI-F3-OPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -657,7 +705,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w9B-LZ-jAE"/>
+        <segue reference="InD-4x-ual"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Closet" width="31" height="24"/>

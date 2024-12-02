@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9E618478-218F-46BE-A13A-288B8C0C2D2B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CB09577-94F5-4A95-8860-48D479A1764B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MirrorMirror/ClosetViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - 408d0fb1f76b3d8c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.imageNames.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/MirrorMirror/ClosetViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - ffee174e56238a23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.imageNames.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/MirrorMirror/ClosetViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - 720d3a406ffdeb12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.imageNames.modify : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/MirrorMirror/ClosetViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - a9e073a8f6a912be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.imageNames.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - 7b65d4c7b0e85482"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MirrorMirror.ClosetViewController"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/MirrorMirror/ClosetViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "8CB09577-94F5-4A95-8860-48D479A1764B - 501f4c679bc419c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MirrorMirror.ClosetViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MirrorMirror.ClosetViewController&gt;"
+                  moduleName = "MirrorMirror"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marilinfrancisco/Desktop/CSE438S/MirrorMirrorApp/MirrorMirror/MirrorMirror/ClosetViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

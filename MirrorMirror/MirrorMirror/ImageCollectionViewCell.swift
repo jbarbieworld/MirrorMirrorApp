@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+/*
 class ImageCollectionViewCell: UICollectionViewCell {
 
     
@@ -15,4 +15,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     //test AGAIN
     
-}
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+}*/

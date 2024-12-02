@@ -9,108 +9,7 @@ import Foundation
 import UIKit
 
 class BuildOutfitVC: UIViewController{
-    /*
-    var tops: [ClothingItem] = []
-    var bottoms: [ClothingItem] = []
-    var accessories: [ClothingItem] = []
-    
-    var selectedCategory: CategoryType = .none
-
-    var imagePath: String?
-    var topImagePath: String?
-    var bottomImagePath: String?
-    var accessoryImagePath: String?
-    
-    var currentTopIndex = 0
-    var currentBottomIndex = 0
-    var currentAccessoryIndex = 0
-
-    @IBOutlet weak var topVC: UIImageView!
-    @IBOutlet weak var bottomVC: UIImageView!
-    @IBOutlet weak var accessoryVC: UIImageView!
-    
-    @IBOutlet weak var topLeft: UIButton!
-    @IBOutlet weak var topRight: UIButton!
-    
-    @IBOutlet weak var bottomLeft: UIButton!
-    @IBOutlet weak var bottomRight: UIButton!
-    
-    @IBOutlet weak var accessoryLeft: UIButton!
-    @IBOutlet weak var accessoryRight: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("Selected Category in BuildOutfitVC: \(selectedCategory)")
-        print("Top Image Path: \(topImagePath ?? "nil")")
-        print("Bottom Image Path: \(bottomImagePath ?? "nil")")
-        print("Accessory Image Path: \(accessoryImagePath ?? "nil")")
-
-        // Set the correct image based on the passed category and image path
-        
-        if let categoryVC = self.navigationController?.viewControllers.first(where: { $0 is Category }) as? Category {
-            categoryVC.delegate = self
-        }
-
-        //updateCategoryImageView()
-
-    }
-
-    
-        /*func updateCategoryImageView() {
-        print("in update category image view")
-        switch selectedCategory {
-        case .top:
-            topImagePath = imagePath
-            topVC.image = UIImage(contentsOfFile: imagePath!)
-        case .bottom:
-            bottomImagePath = imagePath
-            bottomVC.image = UIImage(contentsOfFile: imagePath!)
-        case .accessory:
-            accessoryImagePath = imagePath
-            accessoryVC.image = UIImage(contentsOfFile: imagePath!)
-        default:
-            break
-        }
-    }*/
-    
-    func updateCategoryImage(category: CategoryType, imagePath: String) {
-        switch selectedCategory {
-        case .top:
-            topImagePath = imagePath
-            topVC.image = UIImage(contentsOfFile: imagePath)
-        case .bottom:
-            bottomImagePath = imagePath
-            bottomVC.image = UIImage(contentsOfFile: imagePath)
-        case .accessory:
-            accessoryImagePath = imagePath
-            accessoryVC.image = UIImage(contentsOfFile: imagePath)
-        default:
-            break
-        }
-
-    }
-    
-
-    
-    private func loadImage(for clothingItem: ClothingItem, into imageView: UIImageView) {
-        imageView.image = nil  // Clear the image first
-        
-        if FileManager.default.fileExists(atPath: clothingItem.imagePath) {
-            if let image = UIImage(contentsOfFile: clothingItem.imagePath) {
-                imageView.image = image
-            } else {
-                imageView.image = UIImage(named: "noPicture.jpeg")  // Placeholder if loading fails
-            }
-        } else {
-            imageView.image = UIImage(named: "noPicture.jpeg")  // Placeholder if file doesn't exist
-        }
-    }
-
-
-*/
-    
-
+  
     @IBOutlet weak var tl: UIButton!
     @IBOutlet weak var tr: UIButton!
     @IBOutlet weak var bl: UIButton!
@@ -122,9 +21,24 @@ class BuildOutfitVC: UIViewController{
     @IBOutlet weak var bottomView: UIImageView!
     @IBOutlet weak var accessoryView: UIImageView!
     
-    var topImages: [UIImage] = []
-    var bottomImages: [UIImage] = []
-    var accessoryImages: [UIImage] = []
+   // var topImages: [UIImage] = []
+    //var bottomImages: [UIImage] = []
+    //var accessoryImages: [UIImage] = []
+    
+    var topImages: [UIImage] {
+        get { return ImageManager.shared.topImages }
+        set { ImageManager.shared.topImages = newValue }
+    }
+    
+    var bottomImages: [UIImage] {
+        get { return ImageManager.shared.bottomImages }
+        set { ImageManager.shared.bottomImages = newValue }
+    }
+    
+    var accessoryImages: [UIImage] {
+        get { return ImageManager.shared.accessoryImages }
+        set { ImageManager.shared.accessoryImages = newValue }
+    }
     
     var currentTopIndex = 0
     var currentBottomIndex = 0
@@ -157,6 +71,11 @@ class BuildOutfitVC: UIViewController{
             accessoryView.image = screenshot // Set the screenshot to the UIImageView for visual display
 
         }
+        
+        if let shirt2 = UIImage(named: "Shirt2.png") {
+            topImages.append(shirt2)
+        }
+
 
         updateClothingItems()
         print("Top images count: \(topImages.count)") // Debugging line to check the count of topImages
@@ -310,7 +229,18 @@ class BuildOutfitVC: UIViewController{
         }
         updateClothingItems() // Update the display after adding a new item
     }
-
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+        guard currentTopIndex < topImages.count, currentBottomIndex < bottomImages.count, currentAccessoryIndex < accessoryImages.count else{
+            
+            print("Cannot save outfit. One or more indices are invalid.")
+            return
+        }
+        
+        OutfitManager.shared.saveOutfit(topIndex: currentTopIndex, bottomIndex: currentBottomIndex, accessoryIndex: currentAccessoryIndex)
+        print("Outfit saved! Current indices: top =\(currentTopIndex), bottom =\(currentBottomIndex), accessory =\(currentAccessoryIndex)")
+    }
     
 }
 

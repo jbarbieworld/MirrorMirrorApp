@@ -18,6 +18,9 @@
 		F7A421F72CE3D75100F3B067 /* BuildOutfitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */; };
 		F7A421F92CE444C500F3B067 /* ClosetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421F82CE444C500F3B067 /* ClosetViewController.swift */; };
 		F7A421FB2CE4450400F3B067 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */; };
+		F7BBCA7B2CFD0FA90045A2E4 /* SaveOutfits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBCA7A2CFD0FA90045A2E4 /* SaveOutfits.swift */; };
+		F7BBCA7D2CFD19F60045A2E4 /* SaveOutfitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBCA7C2CFD19F60045A2E4 /* SaveOutfitsCell.swift */; };
+		F7BBCA7F2CFD4F000045A2E4 /* OutfitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BBCA7E2CFD4F000045A2E4 /* OutfitDetailViewController.swift */; };
 		F7DECD7D2CE2DF99003AEDF9 /* ClothingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DECD7C2CE2DF99003AEDF9 /* ClothingData.swift */; };
 		F7DECD872CE32643003AEDF9 /* ClothingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DECD862CE32643003AEDF9 /* ClothingCell.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildOutfitVC.swift; sourceTree = "<group>"; };
 		F7A421F82CE444C500F3B067 /* ClosetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewController.swift; sourceTree = "<group>"; };
 		F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7BBCA7A2CFD0FA90045A2E4 /* SaveOutfits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOutfits.swift; sourceTree = "<group>"; };
+		F7BBCA7C2CFD19F60045A2E4 /* SaveOutfitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOutfitsCell.swift; sourceTree = "<group>"; };
+		F7BBCA7E2CFD4F000045A2E4 /* OutfitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitDetailViewController.swift; sourceTree = "<group>"; };
 		F7DECD7C2CE2DF99003AEDF9 /* ClothingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingData.swift; sourceTree = "<group>"; };
 		F7DECD862CE32643003AEDF9 /* ClothingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +82,7 @@
 				BF52178E2CE14F9400744E30 /* Config.xcconfig */,
 				BFABEA162CDC20460091BE0E /* ViewController.swift */,
 				BFABEA182CDC20460091BE0E /* Main.storyboard */,
+				F7BBCA7E2CFD4F000045A2E4 /* OutfitDetailViewController.swift */,
 				BFABEA1B2CDC20480091BE0E /* Assets.xcassets */,
 				BFABEA1D2CDC20480091BE0E /* LaunchScreen.storyboard */,
 				BFABEA202CDC20480091BE0E /* Info.plist */,
@@ -84,6 +91,8 @@
 				F7A421F62CE3D75100F3B067 /* BuildOutfitVC.swift */,
 				F7A421F82CE444C500F3B067 /* ClosetViewController.swift */,
 				F7A421FA2CE4450400F3B067 /* ImageCollectionViewCell.swift */,
+				F7BBCA7A2CFD0FA90045A2E4 /* SaveOutfits.swift */,
+				F7BBCA7C2CFD19F60045A2E4 /* SaveOutfitsCell.swift */,
 			);
 			path = MirrorMirror;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BBCA7F2CFD4F000045A2E4 /* OutfitDetailViewController.swift in Sources */,
 				F7A421F72CE3D75100F3B067 /* BuildOutfitVC.swift in Sources */,
 				F7A421FB2CE4450400F3B067 /* ImageCollectionViewCell.swift in Sources */,
 				BFABEA172CDC20460091BE0E /* ViewController.swift in Sources */,
@@ -167,6 +177,8 @@
 				BF52178D2CE14AF900744E30 /* Caller.swift in Sources */,
 				F7DECD872CE32643003AEDF9 /* ClothingCell.swift in Sources */,
 				F7A421F92CE444C500F3B067 /* ClosetViewController.swift in Sources */,
+				F7BBCA7B2CFD0FA90045A2E4 /* SaveOutfits.swift in Sources */,
+				F7BBCA7D2CFD19F60045A2E4 /* SaveOutfitsCell.swift in Sources */,
 				BFABEA152CDC20460091BE0E /* SceneDelegate.swift in Sources */,
 				F7DECD7D2CE2DF99003AEDF9 /* ClothingData.swift in Sources */,
 			);

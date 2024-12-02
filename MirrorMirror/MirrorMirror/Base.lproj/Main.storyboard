@@ -19,10 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXa-cs-b2z">
-                                <rect key="frame" x="144" y="616" width="104" height="35"/>
+                                <rect key="frame" x="106" y="554" width="181" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" name="background"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="removeBG"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Remove Background"/>
                                 <connections>
                                     <action selector="removeBackgroundButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SAO-98-dwS"/>
                                 </connections>
@@ -35,9 +37,18 @@
                                 <rect key="frame" x="112" y="257" width="168" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o3-zX-CQs">
-                                <rect key="frame" x="83" y="671" width="53" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="While the image loads, select which category the item is in:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-Vg-ufr">
+                                <rect key="frame" x="81" y="597" width="236" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o3-zX-CQs">
+                                <rect key="frame" x="72" y="686" width="53" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="darkblue"/>
+                                <color key="tintColor" name="background"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Top"/>
                                 <connections>
@@ -46,8 +57,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-fW-Tkl">
-                                <rect key="frame" x="144" y="671" width="80" height="35"/>
+                                <rect key="frame" x="131" y="686" width="80" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="darkblue"/>
+                                <color key="tintColor" name="background"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Bottom"/>
                                 <connections>
@@ -56,8 +69,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-AY-aPm">
-                                <rect key="frame" x="226" y="671" width="104" height="35"/>
+                                <rect key="frame" x="219" y="686" width="104" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="darkblue"/>
+                                <color key="tintColor" name="background"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Accessory"/>
                                 <connections>
@@ -66,10 +81,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sax-yP-m9Y">
-                                <rect key="frame" x="150" y="545" width="89" height="35"/>
+                                <rect key="frame" x="128" y="511" width="137" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" name="background"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Camera"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Open Camera"/>
                                 <connections>
                                     <action selector="cameraOpened:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzc-0C-vvv"/>
                                 </connections>
@@ -91,7 +108,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Mdx-Kz-Jsi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2078.6259541984732" y="822.53521126760563"/>
+            <point key="canvasLocation" x="1829.7709923664122" y="772.53521126760563"/>
         </scene>
         <!--My Closet-->
         <scene sceneID="Nvm-d9-fdM">
@@ -230,6 +247,17 @@
                                     <action selector="BR:" destination="mGh-I9-jfS" eventType="touchUpInside" id="gkY-xO-Qao"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kc-Oh-N0y">
+                                <rect key="frame" x="101" y="734" width="190" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" name="background"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save Outfit"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="mGh-I9-jfS" eventType="touchUpInside" id="zcb-hn-O2U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yA7-WA-RZO"/>
                         <color key="backgroundColor" name="background"/>
@@ -250,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7D-lP-guP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3805" y="15"/>
+            <point key="canvasLocation" x="4167" y="227"/>
         </scene>
         <!--Build outfit-->
         <scene sceneID="Daw-EU-Lrf">
@@ -509,21 +537,81 @@
             </objects>
             <point key="canvasLocation" x="2079" y="15"/>
         </scene>
-        <!--Saved Outfits-->
+        <!--Save Outfits-->
         <scene sceneID="GR7-rb-ykZ">
             <objects>
-                <viewController id="oAT-CW-Yb3" sceneMemberID="viewController">
+                <viewController id="oAT-CW-Yb3" customClass="SaveOutfits" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Evh-yq-RST">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oNG-7d-l2z">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="background"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mkH-9c-JAd">
+                                    <size key="itemSize" width="163" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SaveCell" id="WYy-Dq-2DH" customClass="SaveOutfitsCell" customModule="MirrorMirror" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dQi-Y6-kCL">
+                                            <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUO-Qe-USP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="163" height="250"/>
+                                        <connections>
+                                            <outlet property="outfitImageView" destination="OUO-Qe-USP" id="4z0-Nj-bPm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PaN-wx-al2"/>
                         <color key="backgroundColor" name="background"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Saved Outfits" image="Saved" id="TeY-iG-gf2"/>
+                    <navigationItem key="navigationItem" id="GmL-7b-gfN"/>
+                    <connections>
+                        <outlet property="collectionView" destination="oNG-7d-l2z" id="7Rl-Ll-ifC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6J-Cc-4Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4602" y="-777"/>
+            <point key="canvasLocation" x="5527.480916030534" y="-777.46478873239437"/>
+        </scene>
+        <!--Outfit Detail View Controller-->
+        <scene sceneID="uFx-Sy-R2d">
+            <objects>
+                <viewController storyboardIdentifier="OutfitDetailViewController" id="36z-ve-DKU" customClass="OutfitDetailViewController" customModule="MirrorMirror" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="COb-mM-7Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-1A-jxx">
+                                <rect key="frame" x="0.0" y="87" width="391" height="699"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d0f-qp-NZs"/>
+                        <color key="backgroundColor" name="background"/>
+                    </view>
+                    <connections>
+                        <outlet property="outfitImageView" destination="Rbe-1A-jxx" id="icl-gj-dUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTX-vE-6Cm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6257.2519083969464" y="-772.53521126760563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4tE-0n-mWN">
@@ -540,12 +628,31 @@
                         <segue destination="s91-NS-l0b" kind="relationship" relationship="viewControllers" id="l7q-6n-fsc"/>
                         <segue destination="mGh-I9-jfS" kind="relationship" relationship="viewControllers" id="InD-4x-ual"/>
                         <segue destination="OjI-5r-X3h" kind="relationship" relationship="viewControllers" id="2Ha-lJ-qTK"/>
-                        <segue destination="oAT-CW-Yb3" kind="relationship" relationship="viewControllers" id="m4G-lV-eKL"/>
+                        <segue destination="WOK-wz-Row" kind="relationship" relationship="viewControllers" id="m4G-lV-eKL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLI-F3-OPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2955" y="-804"/>
+        </scene>
+        <!--Saved Outfits-->
+        <scene sceneID="Vk3-3a-QmC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOK-wz-Row" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Saved Outfits" image="Saved" id="TeY-iG-gf2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wr5-pn-iPx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oAT-CW-Yb3" kind="relationship" relationship="rootViewController" id="EGL-7t-J0b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOs-ut-RLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4600.7633587786258" y="-777.46478873239437"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -565,6 +672,9 @@
         </namedColor>
         <namedColor name="background">
             <color red="0.84799998998641968" green="0.89300000667572021" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="darkblue">
+            <color red="0.0040000006556510925" green="0.16500000655651093" blue="0.21200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grayblue">
             <color red="0.55299997329711914" green="0.62400001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
